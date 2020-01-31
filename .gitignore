@@ -1,5 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .env
+.idea
+
 
 teamcity/data/*
 !teamcity/data/.gitkeep
