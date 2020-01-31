@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.env
+
+teamcity/data/*
+!teamcity/data/.gitkeep
+
+teamcity/logs/*
+!teamcity/logs/.gitkeep
