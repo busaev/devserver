@@ -35,23 +35,23 @@ services:
         depends_on:
             - postgresql
 
-    teamcity:
-        image: jetbrains/teamcity-server
-        ports:
-            - "8112:8111"
-        volumes:
-            - ./teamcity/data:/data/teamcity_server/datadir
-            - ./teamcity/logs:/opt/teamcity/logs
-        networks:
-            - devserver
-
-    teamcity-agent:
-        image: jetbrains/teamcity-agent
-        environment:
-            - SERVER_URL=http://server:8111
-            - AGENT_NAME=regular_agent
-        networks:
-            - devserver
+#    teamcity:
+#        image: jetbrains/teamcity-server
+#        ports:
+#            - "8112:8111"
+#        volumes:
+#            - ./teamcity/data:/data/teamcity_server/datadir
+#            - ./teamcity/logs:/opt/teamcity/logs
+#        networks:
+#            - devserver
+#
+#    teamcity-agent:
+#        image: jetbrains/teamcity-agent
+#        environment:
+#            - SERVER_URL=http://server:8111
+#            - AGENT_NAME=regular_agent
+#        networks:
+#            - devserver
 
     postgresql:
         image: postgres:12
